@@ -176,7 +176,7 @@ html, body {
 </script>
 </head>
 <div class="message">
-Ops, it seems that the page you requested was not found. Click <a href="http://lessutility.com">here</a> to go back to the main page.
+Oops, it seems that the page you requested was not found. Click <a href="http://lessutility.com">here</a> to go back to the main page.
 </div>
 <div class="cb">
   <div class="row a">

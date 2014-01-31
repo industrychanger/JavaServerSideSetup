@@ -14,9 +14,6 @@
   </filter>
   <filter-mapping>
     <filter-name>noCacheFilter</filter-name>
-    <url-pattern>/dashboard</url-pattern>
-    <url-pattern>/settings</url-pattern>
-    <url-pattern>/changeHome</url-pattern>
      <url-pattern>/url</url-pattern>
   </filter-mapping>
   
@@ -38,7 +35,7 @@
     <description></description>
     <display-name>url</display-name>
     <servlet-name>url</servlet-name>
-    <servlet-class>energy.url</servlet-class>
+    <servlet-class>com.example.url</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>url</servlet-name>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>JavaExample</display-name>
+  <welcome-file-list>
+    <welcome-file>home</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/jsps/404/404.jsp</location>
+  </error-page>
+  <filter>
+    <filter-name>noCacheFilter</filter-name>
+    <filter-class>NoCacheFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>noCacheFilter</filter-name>
+    <url-pattern>/dashboard</url-pattern>
+    <url-pattern>/settings</url-pattern>
+    <url-pattern>/changeHome</url-pattern>
+     <url-pattern>/url</url-pattern>
+  </filter-mapping>
+  
+<filter>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+
+  <session-config>
+    <session-timeout>40</session-timeout>
+  </session-config>
+  <servlet>
+    <description></description>
+    <display-name>url</display-name>
+    <servlet-name>url</servlet-name>
+    <servlet-class>energy.url</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>url</servlet-name>
+    <url-pattern>/url</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>home</servlet-name>
+    <jsp-file>/WEB-INF/jsps/Public/Home.jsp</jsp-file>
+  </servlet>
+</web-app>
